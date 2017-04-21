@@ -5,8 +5,8 @@
     var ThreatView = function(type) {
         this.serverConfig = {
             type: 'http',
-            ip: '192.168.223.66',
-            port: 8000,
+            ip: '137.0.0.1',
+            port: 80,
             router: '/query'
         };
         this.type = type;
