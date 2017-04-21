@@ -1,0 +1,24 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - npm --registry https://registry.npm.taobao.org info underscore
+    - npm install
+    - npm install gulp
+    - gulp build
+    - python -m py_compile threatengine.py
+    - python -m py_compile iplib.py
+    - python -m py_compile vnc.py
+  tags:
+    - linux
+  artifacts:
+    when: on_success
+    paths:
+      - dist
+      - threatengine.pyc
+      - iplib.pyc
+      - vnc.pyc
+    expire_in: 1 week
+    name: "${CI_PROJECT_NAME}_${CI_BUILD_REF_NAME}_${CI_BUILD_ID}_${CI_BUILD_REF}"

@@ -1,0 +1,11 @@
+node_modules
+*.log
+.sass-cache
+#sass cache
+.sass-cache
+#python pycharm
+*.pyc
+iplib/.idea/*
+*/__pycache__
+missed.txt
+dist

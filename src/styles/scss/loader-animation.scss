@@ -1,0 +1,36 @@
+.view-wapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 1);
+    .top-wapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background-color: red;
+    }
+    .bottom-wapper {
+        @extend .top-wapper;
+        top: auto;
+        bottom: 0;
+        // background-color: blue;
+    }
+}
+
+.ani {
+    animation: openDoor 2s 1 linear;
+}
+
+@keyframes openDoor {
+    from {
+        height: 50%;
+    }
+    to {
+        height: 0;
+    }
+}

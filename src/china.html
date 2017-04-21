@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Screen1</title>
+    <link rel="stylesheet" href="styles/main.min.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+</head>
+
+<body>
+    <div class="loading-data">正在加载...</div>
+    <div class="copyright">
+        <h1>金山安全反病毒实验室丨威胁态势(国内)</h1>
+    </div>
+    <div class="mapbg">
+        <video autoplay="true" loop="false">
+            <source src="video/d.mp4" type="video/mp4">
+        </video>
+        <div class="map-container" id="map-container"></div>
+    </div>
+    <div class="rank">
+        <div class="panel-head"></div>
+        <div class="nowTime">
+            <a href="javascript:;">
+                <h3><span id="year">0000</span>/<span id="month">00</span>/<span id="day">00</span></h3>
+                <h1><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> <span class="milliSeconde" id="milliSeconde">00</span></h1>
+            </a>
+        </div>
+        <div class="title">
+            Regions
+        </div>
+        <table class="table">
+            <thead>
+                <th width="30">#</th>
+                <th width="40">○</th>
+                <th>Region</th>
+                <th>Count</th>
+            </thead>
+            <tbody id="citysRank">
+            </tbody>
+        </table>
+        <div class="title">
+            Threaten
+        </div>
+        <table class="table">
+            <thead>
+                <th width="30">#</th>
+                <th width="40">○</th>
+                <th>Name</th>
+                <th>Count</th>
+            </thead>
+            <tbody id="threatenRank">
+            </tbody>
+        </table>
+        <div class="panel-head"></div>
+    </div>
+    <div class="threat">
+        <table class="table rowcolor">
+            <thead>
+                <th>Time</th>
+                <th>IP</th>
+                <th>City</th>
+                <th>Name</th>
+                <th>Location</th>
+            </thead>
+            <tbody id="threat">
+            </tbody>
+        </table>
+    </div>
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <script src="scripts/main.min.js"></script>
+    <script type="text/javascript">
+        var view = new ThreatView('china');
+    </script>
+</body>
+
+</html>
